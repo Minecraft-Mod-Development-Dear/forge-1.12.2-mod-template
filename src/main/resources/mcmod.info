@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "modtemplate",
+    "name": "Mod Template",
+    "description": "Template Minecraft Forge 1.12.2 mod.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["Minecraft-Mod-Development-Dear"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
