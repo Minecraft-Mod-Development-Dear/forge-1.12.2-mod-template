@@ -1,0 +1,25 @@
+name: Release on main PR merge
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  release:
+    name: Build and release
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    uses: Minecraft-Mod-Development-Dear/.github/.github/workflows/forge-gradle-release.yml@main
+    with:
+      java-version: "8"
+      gradle-version: "4.10.3"
+      build-task: build
+      artifact-glob: build/libs/*.jar
+      tag-strategy: version
